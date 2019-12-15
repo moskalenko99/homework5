@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+body{
+	height: 100vh;
+	display: flex;
+	background: #84ccff;
+}
+
+#email, #password{
+	border: none;
+	background-color: #aa99ff;
+}
+
+.form{
+	margin: auto;
+}
+
+.form__div__email, .form__div__password, .form__remember, .form__button {
+	text-align: center;
+	margin: 5px 0;
+}
+
+.email, .password, .form__remember__label{
+	color: #b50202;
+}
+
+.form__remember__checkbox {
+	cursor: pointer;
+	border:2px dotted #00f;
+	background:#ff0000;
+}
+
+.button {
+	width: 170px;
+	height: 25px;
+	color: #b50202;
+	background-color: #A9F;
+	border: none;
+}
