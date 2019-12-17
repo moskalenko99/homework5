@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		header > a{
+			float: left;
+		}
+
+		header > nav{
+			float: right;	
+		}
+		.clearfix:after{
+			content: '';
+			display: block;
+			float: none;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	
+	<header class="clearfix">
+		<a href="#">
+			<img src="https://placehold.it/200x200" alt="">
+		</a>
+		<div></div>
+		<nav>
+			<a href="#">Nav item 1</a>
+			<a href="#">Nav item 2</a>
+			<a href="#">Nav item 3</a>
+			<a href="#">Nav item 4</a>
+		</nav>
+	</header>
+</body>
+</html>
