@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.Flag{
+			display: none;
+		}
+
+		.Flag__icon {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+
+		.Flag:checked + .Flag__icon {
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<a href="https://google.com" title="google.com">Google</a>
+	<form action="https://google.com/search" method="GET">
+		<input type="text" name="q">
+		<button>
+			Поиск
+		</button>
+		<form action="">
+			<label>
+				<input type="checkbox" class="Flag">
+				<div class="Flag__icon"></div>
+			</label>
+			<input type="checkbox" name="check1[]">
+			<input type="checkbox" name="check1[]">
+			<input type="checkbox" name="check1[]">
+			<input type="radio" name="radio1">
+			<input type="radio" name="radio1">
+		</form>
+	</form>
+</body>
+</html>
