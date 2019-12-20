@@ -1,0 +1,9 @@
+/* Можно менять весь файл */
+.dl{
+	background-color: #ccc;
+}
+
+dd:hover{
+	background-color: red;
+	color: white;
+}

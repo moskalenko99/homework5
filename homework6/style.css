@@ -8,8 +8,8 @@ html, body{
     font-size: 13px;
 }
 
-header > nav {
-    float: right;
+a{
+    text-decoration: none;
 }
 
 .clearfix:after{
@@ -20,21 +20,19 @@ header > nav {
 }
 
 .header{
-    display: flex;
     width: 100%;
 }
 
 .navigation{
-    margin: 5px;
+    float: right;
+    display: flex;
+    margin: 20px;
 }
 
 .navigation__link {
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
+    line-height: 28px;
     color: black;
     font-family: Helvetica, sans-serif;
-
 }
 
 .navigation__link:hover{
@@ -52,8 +50,111 @@ header > nav {
 
 .navigation__login{
     line-height: 28px;
-    background-color: blue;
+    background-color: #7373ff;
     color: white;
     font-weight: bold;
     padding: 0 12px;
+}
+
+.search__input{
+    width: 500px;
+    height: 40px;
+    border-radius: 25px; 
+    border: 1px solid #ccc;
+    font-size: 20px;
+    padding: 0 30px;
+}
+
+.search__input:hover{
+    box-shadow: 0 0 10px rgba(138, 134, 134, 0.5);
+}
+
+.body__image, .search, .body__button, .language{
+    display: flex;
+    justify-content: center;
+}
+
+.body__image{
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+
+.body__button{
+    margin-top: 30px;
+}
+
+.body__button__luck{
+    margin-left: 15px;
+}
+
+.body__button__search, .body__button__luck{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    color: #5F6368;
+    width: 130px;
+    height: 36px;
+    cursor: pointer;
+}
+
+.language{
+    margin-top: 30px;
+}
+
+.language__paragraph{
+    font-family: Helvetica, sans-serif;
+}
+
+footer{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    line-height: 40px;
+    background-color: #efeeee;
+
+}
+
+footer a{
+    color: #5f6368;
+    font-size: 13px;
+    font-family: Helvetica, sans-serif;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+.footer{
+    border-bottom: 1px solid #e4e4e4;
+    border-top: 1px solid #e4e4e4;
+    padding: 0 30px;
+}
+
+.footer > span > a {
+    margin-right: 25px;
+}
+
+.footer > span > a:last-child{
+    margin-right: 0;
+}
+
+.footer__top{
+    background-color: #efeeee;
+
+}
+
+.footer__paragraph{
+    color: rgba(0,0,0,.54);
+    font-size: 15px;
+    font-family: Helvetica, sans-serif;
+}
+
+.footer__nav__left{
+    float: left;
+}
+
+.footer__nav__right{
+    float: right;
 }
