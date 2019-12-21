@@ -87,6 +87,14 @@ a{
     margin-left: 15px;
 }
 
+.button__search{
+    float: left;
+}
+
+.button__luck{
+    float: right;
+}
+
 .body__button__search, .body__button__luck{
     font-size: 14px;
     font-family: arial,sans-serif;
@@ -108,9 +116,9 @@ a{
 }
 
 footer{
+    position: absolute;
     bottom: 0;
     left: 0;
-    position: absolute;
     right: 0;
     line-height: 40px;
     background-color: #efeeee;
