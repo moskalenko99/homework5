@@ -87,14 +87,6 @@ a{
     margin-left: 15px;
 }
 
-.button__search{
-    float: left;
-}
-
-.button__luck{
-    float: right;
-}
-
 .body__button__search, .body__button__luck{
     font-size: 14px;
     font-family: arial,sans-serif;
