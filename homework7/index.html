@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#contact{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+.modal {
+      opacity: 0;
+    }
+		.modal:target {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+	</style>
+</head>
+<body>
+
+	<a href="#contact">Открыть модальное окно</a>
+	<div class="modal" id="contact"></div>
+	
+</body>
+</html>

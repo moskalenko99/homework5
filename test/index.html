@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			position: relative;
+		}
+
+		.rect {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 50px;
+			height: 50px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="rect"></div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script>
+        (function(){
+        	var left = 0;
+	        var top = 0;
+	        var keyMap = {};
+
+			$(document).ready(function(){
+			  $(document).on('keydown', function(event){
+	  			keyMap[event.keyCode] = true;
+			  });
+
+			  $(document).on('keyup', function(event){
+		  		delete keyMap[event.keyCode];
+		  		// up 38
+		  		// down 40
+		  		// left 37
+		  		// right 39
+			  });
+
+
+			  setInterval(function(){
+			  		if(keyMap[38]) {
+			  			top -= 5;
+			  		}
+		  			if(keyMap[40]) {
+			  			top += 5;
+			  		}
+			  		if(keyMap[37]) {
+			  			left -= 5;
+			  		}
+			  		if(keyMap[39]) {
+			  			left += 5;
+			  		}
+
+					$('.rect').css({ top: top, left: left });
+			  }, 15);
+
+			});
+        })();
+	</script>
+</body>
+</html>

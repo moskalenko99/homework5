@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: Helvetica, sans-serif;
+      font-size: 18px;
+    }
+
+    body {
+      display: flex;
+    }
+
+    .Modal__opener {
+      margin: auto;
+    }
+
+    .Modal {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
+      background-color: rgba(0, 0, 0, .5);
+      display: flex;
+      transform: scale(1.05);
+
+      transition: opacity .2s ease-in, transform .3s ease-in;
+    }
+
+    .Modal:target {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+
+    .Modal__close {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+    }
+
+    .Form {
+      margin: auto;
+      width: 300px;
+      height: 400px;
+      padding: 30px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 2px 5px 8px 0px rgba(0, 0, 0, 0.47);
+
+      position: relative;
+    }
+
+    .Form__field {
+      margin: 15px 0;
+      width: 100%;
+      font-size: .8rem;
+    }
+
+    .Form__field--email, .Form__field--password {
+      width: 100%;
+      padding: 10px 20px;
+    }
+
+    .Form__submit {
+      padding: 10px 20px;
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+
+      background-color: lightgreen;
+      border: none;
+      color: white;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="#modal" class="Modal__opener">Открыть модальное окно</a>
+  <div class="Modal" id="modal">
+    <form action="#" method="POST" class="Form">
+      <a href="#" class="Modal__close">Закрыть</a>
+      <label class="Form__field">
+        <div>
+          <span>
+            E-mail:
+          </span>
+        </div>
+        <input type="email" name="email" class="Form__field--email">
+      </label>
+      <label class="Form__field">
+        <div>
+          <span>
+            Password:
+          </span>
+        </div>
+        <input type="password" name="password" class="Form__field--password">
+      </label>
+      <button type="submit" class="Form__submit">Войти</button>
+    </form>
+  </div>
+</body>
+</html>
