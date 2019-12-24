@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			transition-property: none;
+			transition-duration: .2s;
+			transition-delay: 0;
+			transition-timing-function: ease-out;
+			box-sizing: border-box;
+		}
+
+		html,body{
+			width: 100vh;
+		}
+
+		body{
+			display: flex;
+		}
+		
+		.navigation, .content{
+			border:1px solid black;
+		}
+
+		.navigation{
+			width: 270px;
+			min-width: 270px;
+			transform: translateX(0);
+			transition-property: transform;
+		}
+
+		.navigation--closed{
+			transform: translate(-270px);
+		}
+
+		.content{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+	<aside class="navigation navigation--closed">
+		<nav class="navigation__inner">
+			<a href="" class="navigation__item">Nav item 1</a>
+			<a href="" class="navigation__item">Nav item 2</a>
+			<a href="" class="navigation__item">Nav item 3</a>
+			<a href="" class="navigation__item">Nav item 4</a>
+			<a href="" class="navigation__item">Nav item 5</a>
+		</nav>
+	</aside>
+
+	<div class="content"></div>
+	
+</body>
+</html>
