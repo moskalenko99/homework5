@@ -43,5 +43,6 @@ function Tank(){
 		});
 		
 	};
+	this.update({});
 
 }

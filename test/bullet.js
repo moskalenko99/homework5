@@ -1,6 +1,6 @@
 function Bullet(left, top, direction) {
-	this.left = left;
-	this.top = top;
+	this.left = left + 25 ;
+	this.top = top + 25;
 	
 	this._dx = 0;
 	this._dy = 0;
@@ -38,4 +38,6 @@ function Bullet(left, top, direction) {
 	this.render = function(){
 		$(this.element).css({ "top": this.top, "left": this.left });
 	};
+
+	this.update({});
 }
