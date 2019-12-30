@@ -7,7 +7,6 @@ function Bullet(left, top, direction) {
 	this.direction = direction;
 	this.element = document.createElement('div');
 	this.element.classList.add('shot');
-	$("body").append(this.element);
 
 	switch(this.direction){
 		case 0:
@@ -40,4 +39,6 @@ function Bullet(left, top, direction) {
 	};
 
 	this.update({});
+	this.render();
+	$("body").append(this.element);
 }

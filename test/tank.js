@@ -1,9 +1,12 @@
-function Tank(){
+function Tank(left, top){
 
-	this.left = 20;
-	this.top = 20;
+	this.left = left;
+	this.top = top;
 	this.direction = 0; // up, left, right, down
 	this.bullets = [];
+	this.element = document.createElement('div');
+	this.element.classList.add('rect');
+	$("body").append(this.element);
 
 	this.update = function(keys){
 		if(keys[38]) {
@@ -35,8 +38,8 @@ function Tank(){
 	}
 
 	this.render = function(){
-		$(".rect").css({ "top": this.top, "left": this.left });
-		$('.rect').css({"transform": "rotate(" + this.direction +"deg)"});
+		$(this.element).css({ "top": this.top, "left": this.left });
+		$(this.element).css({"transform": "rotate(" + this.direction +"deg)"});
 	
 		this.bullets.forEach(function(bullet){
 			bullet.render();

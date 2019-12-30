@@ -30,43 +30,15 @@
 </head>
 <body>
 	
-	<div class="rect"></div>
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="./bullet.js"></script>
 	<script src="./tank.js"></script>
+	<script src="./aplication.js"></script>
 	<script>
-        (function(){
-	        var keyMap = {};
-	        var tank = new Tank();
-	        // var bullet = new Bullet();
+		var aplication = new Aplication();
 
-			$(document).ready(function(){
-			  $(document).on('keydown', function(event){
-	  			keyMap[event.keyCode] = true;
-			  });
-
-			  $(document).on('keypress', function(event){
-	  			if(event.keyCode == 32){
-	  				tank.fire();
-	  			}
-			  });
-
-			  $(document).on('keyup', function(event){
-		  		delete keyMap[event.keyCode];
-		  		// up 38
-		  		// down 40
-		  		// left 37
-		  		// right 39
-			  });
-
-			  setInterval(function(){
-				  tank.update(keyMap);
-				  tank.render();
-			  }, 15);
-
-			});
-        })();
+		aplication.start();
 	</script>
 </body>
 </html>
