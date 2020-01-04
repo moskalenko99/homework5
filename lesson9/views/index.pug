@@ -1,0 +1,9 @@
+extends layout
+
+include ../components/field/index.pug
+
+block content
+  h1= title
+  p Welcome to #{title}
+  each product in products
+    +Field(product.title)
