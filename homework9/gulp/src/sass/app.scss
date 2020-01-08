@@ -1,0 +1,31 @@
+//1.global files
+
+@import "global/helpers/helpers_all";
+//fonts
+// @import "global/fonts";
+//normalize v7.0
+@import "global/normalize";
+//grid
+@import "global/grid/bootstrap-grid.scss";
+//global
+// @import "global/_fonts.scss";
+@import "global/global";
+@import "global/_typography.scss";
+@import "global/_form.scss";
+@import "global/_checkbox.scss";
+@import "global/_radio.scss";
+@import "global/_buttons.scss";
+@import "global/_collapse.scss";
+@import "global/_tables.scss";
+
+
+//global blocks
+// @import "global/header";
+// @import "global/_menu.scss";
+// @import "global/footer";
+@import "global/_breadcrumbs.scss";
+@import "global/_pagination.scss";
+
+
+//navigation pages
+@import "global/helpers/_pages.scss";

@@ -3,7 +3,7 @@
 var gulp = require('gulp'),
 	gulpLoadPlugins = require('gulp-load-plugins'),
 	$ = gulpLoadPlugins(),
-	pug = require('gulp-pug'),
+	include = require('gulp-file-include'),
 	notify = require('gulp-notify'),
 	plumber = require('gulp-plumber'),
 	prettify = require('gulp-html-prettify'),
@@ -12,25 +12,27 @@ var gulp = require('gulp'),
 
 
 module.exports = function(options) {
-	console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.")
-	console.log("options", options);
+
 	return function() {
 		return multipipe (
 			gulp.src(options.src),
 			$.plumber({
 				errorHandler: notify.onError(function(err){
 					return{
-						title: 'pug error',
+						title: 'html:include',
 						massage:err.massage
 					};
 				})
 			}),
-			pug(),
+			include({
+				prefix: '@@',
+				basepath: '@file'
+			}),
 			prettify({
 				indent_char: '	',
 				indent_size: 1
 			}),
-			$.debug({title:'pug compressed done !'}),
+			$.debug({title:'html include done !'}),
 			gulp.dest(options.dest)
 		);
 	};

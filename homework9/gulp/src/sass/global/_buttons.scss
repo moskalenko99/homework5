@@ -1,0 +1,72 @@
+/* ==========================================================================
+	 BUTTONS
+	 ===========================================================================*/
+button:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus{
+	outline: none;
+}
+
+.btn,
+.btn[type="button"]{
+	position: relative;
+	display: inline-block;
+	min-width: $btn-width;
+	height: $btn-height;
+	font-family: $ff;
+	font-size: $btn-fz;
+	line-height: $btn-lh;
+	font-weight: $btn-fw;
+	text-align: center;
+	overflow: hidden;
+	z-index: 3;
+	text-decoration: none;
+	vertical-align: middle;
+	border-radius: $btn-radius;
+	border: $btn-border-w solid $btn-border-c;
+	cursor: pointer;
+	-ms-touch-action: manipulation;
+			touch-action: manipulation;
+	-webkit-user-select: none;
+		 -moz-user-select: none;
+			-ms-user-select: none;
+					user-select: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	&.btn_md{
+	}
+	&.btn_big{
+	}
+	&.btn_full{
+		width: 100%;
+		min-width: 0;
+	}
+}
+
+.btn[type=button]{
+	-webkit-appearance: inherit;
+}
+
+// /* btn_default*/
+// .btn_default{
+// }
+// /* PRIMARY*/
+// .btn_primary{
+// }
+
+
+/* Отключение кнопки */
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn{
+	cursor: not-allowed;
+	pointer-events: none;
+	opacity: .25;
+	filter: alpha(opacity=25);
+	-webkit-box-shadow: none;
+					box-shadow: none;
+}
+
+/* end buttons*/

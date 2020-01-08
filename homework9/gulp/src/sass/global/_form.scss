@@ -1,0 +1,106 @@
+/*----------------------------------------
+	FORM
+----------------------------------------*/
+.form{
+	position: relative;
+}
+
+.form-group{
+	position: relative;
+	&:not(:last-child){
+		margin-bottom: $group-margin-bottom;
+	}
+}
+.form-group_horizontal{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -.36em;
+}
+/* input */
+.form-input{
+	position: relative;
+	z-index: 2;
+	width: $input-width;
+	height: $input-height;
+	padding: $input-padding;
+	color: $input-tc;
+	font-family: $input-ff;
+	font-weight: $input-fw;
+	line-height: $input-lh;
+	background-color: $input-bg;
+	border: $input-border;
+	border-radius: $input-border-radius;
+	box-sizing: border-box;
+	&:focus{
+		outline: none;
+		@include placeholder {
+			color: transparent;
+			transition: all .3s;
+		}
+	}
+	&.error{
+		@include placeholder {
+			color: transparent;
+			transition: all .3s;
+		}
+	}
+}
+/* textarea */
+textarea{
+	resize: none;
+}
+.form-textarea{
+	width: $textarea-width;
+	height: $textarea-height;
+	padding: $textarea-padding;
+	border: $input-border;
+	border-radius: $textarea-border-radius;
+	background-color: $input-bg;
+	box-sizing: border-box;
+	&:focus{
+		outline: none;
+		@include placeholder{
+			color: transparent;
+			transition: all .3s;
+		}
+	}
+	&.error{
+		@include placeholder {
+			color: transparent;
+			transition: all .3s;
+		}
+	}
+}
+/*fieldset*/
+fieldset{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+/* label */
+label{
+	&.form-label{
+		position: relative;
+		display:inline-block;
+	}
+	&.error{
+		position: absolute;
+		top:15px;
+		left:20px;
+		z-index: 4;
+		display:inline-block;
+		color:$text-color;
+		text-align: left;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+	}
+}
+/* warning */
+sup.warning{
+	top: 0;
+	color: $error;
+	@include font-size(14px);
+}
+/* end forms */
