@@ -1,0 +1,42 @@
+include variables
+
+section.portfolio
+    .container
+        .row.justify-content-center
+            .col-xl-8
+                h2.about__title Latest Works
+                p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda id laboriosam saepe voluptate. Accusantium!
+                button(val="on" class="button" filter='all') All
+                each val, index in portfolio_button
+                    button(val="off" class="button" filter=portfolio_button_filter[index])= val
+        .row.filter
+                div(class="col-xl-4" filter=portfolio_button_filter[0])
+                    img(src="../../static/img/item1.png" alt="item1")
+                    .text
+                        h5 Hand Watch
+                        p Web design
+                div(class="col-xl-4" filter=portfolio_button_filter[2])
+                    img(src="../../static/img/item2.png" alt="item2")
+                    .text
+                        h5 One Day Pass
+                        p Mockups
+                div(class="col-xl-4" filter=portfolio_button_filter[0])
+                    img(src="../../static/img/item3.png" alt="item3")
+                    .text
+                        h5 Modal T-shirt
+                        p Web design
+                div(class="col-xl-4" filter=portfolio_button_filter[2])
+                    img(src="../../static/img/item4.png" alt="item4")
+                    .text
+                        h5 Flash
+                        p Mockups
+                div(class="col-xl-4" filter=portfolio_button_filter[1])
+                    img(src="../../static/img/item5.png" alt="item5")
+                    .text
+                        h5 Eplemost
+                        p Ui/Ux Design
+                div(class="col-xl-4" filter=portfolio_button_filter[1])
+                    img(src="../../static/img/item6.png" alt="item6")
+                    .text
+                        h5 The kitchens
+                        p Ui/Ux Design

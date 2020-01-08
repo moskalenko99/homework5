@@ -1,0 +1,27 @@
+include variables
+
+header.menu-bar
+	.container
+		.row
+			.col-xl-2
+				img(
+					src="../../static/img/logo.png" 
+					alt="logo"
+					class="logo"
+				)
+			.col-xl-8.ml-auto.align-self-center
+				nav
+					ul.menu.d-flex.justify-content-end
+						each val, index in menu
+							li.menu__item
+								a(href=menu_link[index])= val
+						li.menu__item
+							i.fas.fa-search
+header.header
+	.container
+		.row
+			.col-xl-12
+				h1.header__title Web development project
+				p.header__text Very suitable to support all web development project
+				button.button Our services
+				button.button Hire is now	

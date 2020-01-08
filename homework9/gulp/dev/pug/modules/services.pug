@@ -1,0 +1,16 @@
+include variables
+
+section.services
+    .container
+        .row.justify-content-center
+            .col-xl-8
+                h2.about__title Our Services
+                p.about__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda id laboriosam saepe voluptate. Accusantium!
+        .row.justify-content-center
+            each val, index in icon
+                .col-xl-4
+                    .our_card
+                        i(class='fas ' + icon[index] + ' icon')
+                        h3.about__h3 #{services_h3[index]}
+                        p.about__text.services__text #{services_text[index]}
+                        button.button-services #{services_button[index]}
