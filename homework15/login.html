@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./node_modules/reset-css/reset.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     
     <form action="" class="form">
         <div class="login">
-            <label for="login" class="label-login">login:</label>
-            <input type="text" name="login" id="login">
+            <label for="login" class="label label-login">login:</label>
+            <input type="text" name="login" id="login" class="js-Login">
         </div>
         <div class="password">
-            <label for="password" class="label-password">password:</label>
+            <label for="password" class="label label-password">password:</label>
             <input type="password" name="password" id="password">
         </div>
         <div class="button">
@@ -24,6 +25,6 @@
         </div>
     </form>
 
-    <script src="./script.js"></script>
+    <script src="./assets/js/bundle.js"></script>
 </body>
 </html>
