@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+form{
+    margin: auto;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#password, #login, #forename, #surname, #email, #confirm-password {
+    width: 200px;
+    height: 25px;
+    color: #3a3939;
+    border: 1px solid #585855;
+}
+
+.button {
+    display: flex;
+}
+
+.btn{
+    margin: 10px auto;
+    height: 40px;
+    width: 100px;
+    background-color: #d4d3cf;
+    color: #585855;
+    border: 1px solid #585855;
+    cursor: pointer;
+}
+   
